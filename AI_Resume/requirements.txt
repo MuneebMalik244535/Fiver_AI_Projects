@@ -1,9 +1,7 @@
 streamlit
 google-generativeai
-chromadb
+chromadb==0.4.24  # (Latest compatible version)
 fpdf
 pandas
 pillow
-pydantic
-fastapi
-uvicorn
+pydantic==1.10.13  # (ChromaDB ke saath compatible)
