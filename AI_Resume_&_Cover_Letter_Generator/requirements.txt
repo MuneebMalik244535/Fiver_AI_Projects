@@ -1,7 +1,0 @@
-streamlit
-google-generativeai
-chromadb
-fpdf
-pandas
-pillow
-textwrap
