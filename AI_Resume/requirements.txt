@@ -4,4 +4,6 @@ chromadb
 fpdf
 pandas
 pillow
-
+pydantic
+fastapi
+uvicorn
