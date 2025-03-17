@@ -3,7 +3,6 @@ import google.generativeai as genai
 import chromadb
 from fpdf import FPDF
 import pandas as pd
-import textwrap
 from PIL import Image, ImageDraw, ImageFont
 
 # Configure Google Gemini API
