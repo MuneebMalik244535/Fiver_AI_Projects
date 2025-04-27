@@ -1,14 +1,17 @@
-
 import google.generativeai as genai
 import os
 
-# Direct API key likha hai abhi
+# API key configure
 genai.configure(api_key="AIzaSyBJnLpWyU94PCrjB4ohXGicDt8yfERDLTc")
 
 def get_fixed_code(code, explain=False):
-    # Find the full path of prompt_template.txt correctly
-    current_dir = os.path.dirname(__file__)
+    # Yeh code ab exact current file ke directory se prompt_template.txt dhoondta hai
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     prompt_path = os.path.join(current_dir, "prompt_template.txt")
+
+    # Check karo ke prompt_template.txt exist karti hai
+    if not os.path.exists(prompt_path):
+        raise FileNotFoundError(f"prompt_template.txt not found at {prompt_path}")
 
     with open(prompt_path, "r", encoding="utf-8") as f:
         prompt = f.read()
